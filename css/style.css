@@ -1,0 +1,171 @@
+/**** FONT ****/
+/**** COLOR ****/
+/**** PATH ****/
+/**** DIMENSION ****/
+@font-face {
+  font-family: "maven pro";
+  src: url("font/mavenpro-regular.eot");
+  src: url("font/mavenpro-regular.eot?#iefix") format("embedded-opentype"), url("font/mavenpro-regular.woff") format("woff"), url("font/mavenpro-regular.ttf") format("truetype"), url("font/mavenpro-regular.svg#maven pro") format("svg");
+  font-weight: "normal";
+  font-style: "normal";
+}
+
+@font-face {
+  font-family: "maven pro bold";
+  src: url("font/mavenpro-bold.eot");
+  src: url("font/mavenpro-bold.eot?#iefix") format("embedded-opentype"), url("font/mavenpro-bold.woff") format("woff"), url("font/mavenpro-bold.ttf") format("truetype"), url("font/mavenpro-bold.svg#maven pro bold") format("svg");
+  font-weight: "bold";
+  font-style: "normal";
+}
+
+/*@include font-face('maven pro', font-files(	"mavenpro-regular.ttf",
+												"mavenpro-regular.woff",
+												"mavenpro-regular.svg"),
+												"mavenpro-regular.eot", 'normal', 'normal');
+
+@include font-face('maven pro', font-files(	"mavenpro-bold.ttf",
+												"mavenpro-bold.woff",
+												"mavenpro-bold.svg"),
+												"mavenpro-bold.eot", 'bold', 'normal');*/
+body {
+  margin: 0px;
+}
+body #container {
+  width: 750px;
+  height: 1134px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #77d2ee), color-stop(100%, #13aedd));
+  background-image: -webkit-linear-gradient(#77d2ee, #13aedd);
+  background-image: -moz-linear-gradient(#77d2ee, #13aedd);
+  background-image: -o-linear-gradient(#77d2ee, #13aedd);
+  background-image: linear-gradient(#77d2ee, #13aedd);
+}
+body #container header {
+  height: 120px;
+  background-color: rgba(20, 175, 222, 0.4);
+}
+body #container header div#burger_nav {
+  width: 120px;
+  height: 120px;
+  float: left;
+  background: url(../img/sprite.png) no-repeat -379px -83px transparent;
+}
+body #container header div#logo {
+  width: 510px;
+  height: 120px;
+  float: left;
+  background: url(../img/sprite.png) no-repeat -237px 27px transparent;
+}
+body #container header div#notif {
+  width: 120px;
+  height: 120px;
+  float: left;
+  background: url(../img/sprite.png) no-repeat -508px -83px transparent;
+}
+body #container #content {
+  position: relative;
+}
+body #container #content:before {
+  content: '';
+  position: absolute;
+  background-color: #0a546b;
+  width: 5px;
+  height: 892px;
+  left: 45px;
+}
+body #container #content:after {
+  content: '';
+  position: absolute;
+  top: 892px;
+  left: 45px;
+  height: 122px;
+  width: 5px;
+  background: url(../img/sprite.png) no-repeat -776px 0px transparent;
+}
+body #container #content div.month div.title_month {
+  font-family: "maven pro";
+  color: white;
+  font-size: 24px;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  position: relative;
+  z-index: 1;
+  margin-left: 75px;
+  background-color: #0a546b;
+  display: inline-block;
+  padding-right: 13px;
+  -webkit-border-radius: 0px 4px 4px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  -ms-border-radius: 0px 4px 4px 0px;
+  -o-border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 4px 4px 0px;
+  margin-top: 29px;
+}
+body #container #content div.month div.title_month:before {
+  content: '';
+  background: url(../img/sprite.png) no-repeat -408px -347px transparent;
+  width: 47px;
+  height: 53px;
+  position: absolute;
+  z-index: 0;
+  left: -47px;
+  top: 0px;
+}
+body #container #content div.month ul {
+  padding: 0px;
+  margin-left: 30px;
+}
+body #container #content div.month ul li.event {
+  list-style: none;
+  background-color: whitesmoke;
+  -webkit-box-shadow: #105b72 0px 3px 0px;
+  -moz-box-shadow: #105b72 0px 3px 0px;
+  box-shadow: #105b72 0px 3px 0px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  width: 690px;
+  height: 130px;
+}
+body #container #content div.month ul li.event div.day {
+  font-family: "maven pro bold";
+  font-size: 27px;
+  text-transform: uppercase;
+  color: #176780;
+  background-color: #ebebeb;
+  width: 92px;
+  float: left;
+  height: 111px;
+  position: relative;
+  text-align: center;
+  padding-left: 22px;
+  padding-top: 19px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+  -moz-border-radius: 4px 0px 0px 4px;
+  -ms-border-radius: 4px 0px 0px 4px;
+  -o-border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0px 0px 4px;
+}
+body #container #content div.month ul li.event div.day:before {
+  content: '';
+  position: absolute;
+  background: url(../img/sprite.png) no-repeat -505px -260px transparent;
+  height: 92px;
+  width: 11px;
+  left: 12px;
+  top: 20px;
+}
+body #container #content div.month ul li.event div.day strong {
+  font-size: 48px;
+  color: #0a546b;
+}
+body #container #content div.month.actual_month div.title_month {
+  background-color: #94132e;
+}
+body #container #content div.month.actual_month div.title_month:before {
+  background: url(../img/sprite.png) no-repeat -408px -247px transparent;
+}
+body #container #content div.month.actual_month ul li.event .day strong {
+  color: #94132e;
+}

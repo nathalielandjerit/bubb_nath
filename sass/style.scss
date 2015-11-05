@@ -1,0 +1,151 @@
+@import "compass";
+@import "variables";
+@import "mixins";
+
+@include font-face-bubb('maven pro', 'font/mavenpro-regular', 'normal', 'normal');
+@include font-face-bubb('maven pro bold', 'font/mavenpro-bold', 'bold', 'normal');
+
+/*@include font-face('maven pro', font-files(	"mavenpro-regular.ttf",
+												"mavenpro-regular.woff",
+												"mavenpro-regular.svg"),
+												"mavenpro-regular.eot", 'normal', 'normal');
+
+@include font-face('maven pro', font-files(	"mavenpro-bold.ttf",
+												"mavenpro-bold.woff",
+												"mavenpro-bold.svg"),
+												"mavenpro-bold.eot", 'bold', 'normal');*/
+
+body{
+	margin: 0px;
+	#container {
+		width: $width_screen;
+		height: $height_screen;
+		@include background-image(linear-gradient($gradient_container_top, $gradient_container_bottom));
+		header{
+			height: $height_header;
+			background-color: rgba($color_header, 0.4);
+			div#burger_nav{
+				width: $height_header;
+				height: $height_header;
+				float: left;
+				@include background_path("#{$path_img}sprite.png", -379px -83px, no-repeat, transparent);
+			}
+			div#logo{
+				width: ($width_screen - ($height_header * 2));
+				height: $height_header;
+				float: left;
+				@include background_path("#{$path_img}sprite.png", -237px 27px, no-repeat, transparent);
+			}
+			div#notif{
+				width: $height_header;
+				height: $height_header;
+				float: left;
+				@include background_path("#{$path_img}sprite.png", -508px -83px, no-repeat, transparent);
+			}
+		}
+		#content{
+			position: relative;
+			&:before{
+				content: '';
+				position: absolute;
+				background-color: $barre_timeline;
+				width: 5px;
+				height: ($height_screen - $height_header - 122);
+				left: 45px;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				top: ($height_screen - $height_header - 122);
+				left: 45px;
+				height: 122px;
+				width: 5px;
+				@include background_path("#{$path_img}sprite.png", -776px 0px, no-repeat, transparent);
+			}
+			div.month{
+				div.title_month{
+					font-family: $maven;
+					color: $color_month;
+					font-size: 24px;
+					padding-top: 12px;
+					padding-bottom: 14px;
+					position: relative;
+					z-index: 1;
+					margin-left: 75px;
+					background-color: $barre_timeline;
+					display: inline-block;
+					padding-right: 13px;
+					@include border-radius(0px 4px 4px 0px);
+					margin-top: 29px;
+					&:before{
+						content:'';
+						@include background_path("#{$path_img}sprite.png", -408px -347px, no-repeat, transparent);
+						width: 47px;
+						height: 53px;
+						position: absolute;
+						z-index: 0;
+						left: -47px;
+						top: 0px;
+					}
+				}
+				ul{
+					padding: 0px;
+					margin-left: $margin;
+					li.event{
+						list-style: none;
+						background-color: $fond_block;
+						@include box-shadow(#105b72 0px 3px 0px);
+						@include border-radius(4px);
+						width: ($width_screen - ($margin * 2));
+						height: 130px;
+						div.day{
+							font-family: $maven-bold;
+							font-size: 27px;
+							text-transform: uppercase;
+							color: $text_day;
+							background-color: $fond_day;
+							width : 92px;
+							float: left;
+							height: 111px;
+							position: relative;
+							text-align: center;
+							padding-left: 22px;
+							padding-top: 19px;
+							@include border-radius(4px 0px 0px 4px);
+							&:before{
+								content: '';
+								position: absolute;
+								@include background_path("#{$path_img}sprite.png", -505px -260px, no-repeat, transparent);
+								height: 92px;
+								width: 11px;
+								left: 12px;
+								top:20px;
+							}
+							strong{
+								font-size: 48px;
+								color: $barre_timeline;
+							}
+						}
+					}
+				}
+				&.actual_month{
+					div.title_month{
+						background-color: $actual_month;
+						&:before{
+							@include background_path("#{$path_img}sprite.png", -408px -247px, no-repeat, transparent);
+						}
+					}
+					ul{
+						li.event{
+							.day{
+								strong{
+									color: $actual_month;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
